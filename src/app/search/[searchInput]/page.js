@@ -5,7 +5,7 @@ import { movieDB } from "@/libs/movieDB";
 
 export default function SearchResultPage({ params }) {
   const searchInput = params.searchInput;
-  const processedSearchInput = searchInput.replaceAll("%", " ");
+  const processedSearchInput = searchInput.replaceAll("%20", " ");
   const filteredMovies = movieDB
     .filter((movie) =>
       movie.title
